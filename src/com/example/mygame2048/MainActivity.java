@@ -9,11 +9,15 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+
+/**
+ * éªŒè¯gitä½¿ç”¨test
+ * */
 public class MainActivity extends Activity {
 
     private LinearLayout root = null;
-    private TextView tvScore = null;// µ±Ç°µÃ·Ö
-    private TextView tvBestScore = null;// ×î¸ßµÃ·Ö
+    private TextView tvScore = null;// ï¿½ï¿½Ç°ï¿½Ã·ï¿½
+    private TextView tvBestScore = null;// ï¿½ï¿½ßµÃ·ï¿½
     private static MainActivity mainActivity = null;
     private AnimLayer animlayer = null;
     private Button btnRestartGame = null;
@@ -33,8 +37,8 @@ public class MainActivity extends Activity {
 	setContentView(R.layout.activity_main);
 //	requestWindowFeature(Window.FEATURE_NO_TITLE);
 	root = (LinearLayout) findViewById(R.id.container);
-	root.setBackgroundColor(0xfffaf8ef);//ÕâÊÇÕû¸ö½çÃæµÄ±³¾°É«£¬
-	//ÓÉÓÚºóÃæµÄGameViewÉèÖÃÁË×Ô¼ºÌØÓĞµÄ±³¾°É«,ËùÒÔ¿´ÆğÀ´¸Ã±³¾°É«Ö»°üÀ¨GameViewÖ®ÉÏµÄ²¿·Ö
+	root.setBackgroundColor(0xfffaf8ef);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½É«ï¿½ï¿½
+	//ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½GameViewï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ĞµÄ±ï¿½ï¿½ï¿½É«,ï¿½ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½É«Ö»ï¿½ï¿½ï¿½ï¿½GameViewÖ®ï¿½ÏµÄ²ï¿½ï¿½ï¿½
 
 	tvScore = (TextView) findViewById(R.id.tvScore);
 	tvBestScore = (TextView) findViewById(R.id.tvBestScore);
@@ -61,18 +65,18 @@ public class MainActivity extends Activity {
 	return animlayer;
     }
 
-    // Çå³ı·ÖÊı£¬Ó¦¸ÃÊÇ°´ÏÂbuttonÊ±£¬µ±Ç°·ÖÊıÇåÁã
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½buttonÊ±ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void clearScore() {
 	score = 0;
 	showScore();
     }
 
-    // ÏÔÊ¾µ±Ç°·ÖÊı
+    // ï¿½ï¿½Ê¾ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½
     public void showScore() {
 	tvScore.setText(score + "");
     }
 
-    // ·ÖÊıµİ¼ÓµÄËã·¨
+    // ï¿½ï¿½ï¿½ï¿½ï¿½İ¼Óµï¿½ï¿½ã·¨
     public void addScore(int s) {
 	score += s;
 	showScore();
@@ -83,10 +87,10 @@ public class MainActivity extends Activity {
     }
 
     /*
-     * ½«Êı¾İ´æ´¢µ½SharedPreferenceÖĞ
-     * getPreferences·½·¨²úÉúÒ»¸öSharedPerference¶ÔÏó£¬½ÓÊÜÒ»¸ö²Ù×÷Ä£Ê½²ÎÊı£¬Ä¬ÈÏÎªMODE_PRIVATE£¬
-     * ±íÊ¾Ö»ÓĞµ±Ç°µÄÓ¦ÓÃ³ÌĞò²Å¿ÉÒÔ¶ÔÕâ¸öSharedPerferenceÎÄ¼ş²Ù×÷£¬ÁíÓĞMODE_MULTI_PROCESS
-     * SharedPerference¶ÔÏóµÄedit·½·¨»ñÈ¡Ò»¸öEditor¶ÔÏó putInt·½·¨Ìí¼ÓÊı¾İ commit·½·¨Ìá½»Êı¾İ£¬Íê³É´æ´¢¡£
+     * ï¿½ï¿½ï¿½ï¿½ï¿½İ´æ´¢ï¿½ï¿½SharedPreferenceï¿½ï¿½
+     * getPreferencesï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½SharedPerferenceï¿½ï¿½ï¿½ó£¬½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ÎªMODE_PRIVATEï¿½ï¿½
+     * ï¿½ï¿½Ê¾Ö»ï¿½Ğµï¿½Ç°ï¿½ï¿½Ó¦ï¿½Ã³ï¿½ï¿½ï¿½Å¿ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½SharedPerferenceï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½MODE_MULTI_PROCESS
+     * SharedPerferenceï¿½ï¿½ï¿½ï¿½ï¿½editï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡Ò»ï¿½ï¿½Editorï¿½ï¿½ï¿½ï¿½ putIntï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ commitï¿½ï¿½ï¿½ï¿½ï¿½á½»ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½É´æ´¢ï¿½ï¿½
      */
     public void saveBestScore(int s) {
 	Editor e = getPreferences(MODE_PRIVATE).edit();
@@ -95,13 +99,13 @@ public class MainActivity extends Activity {
     }
 
     /*
-     * ´ÓSharedPerference¶ÔÏóÖĞ¶ÁÈ¡Êı¾İ£¬ getInt·½·¨£¬µÚÒ»¸ö²ÎÊıÊÇ¼üÖµ£¬µÚ¶ş¸öÊÇÄ¬ÈÏÖµ£¬
-     * ±íÊ¾µ±´«ÈëµÄ¼üÖµÕÒ²»µ½¶ÔÓ¦µÄÊı¾İÊ±£¬»áÒÔÊ²Ã´ÑùµÄÄ¬ÈÏÖµ·µ»Ø
+     * ï¿½ï¿½SharedPerferenceï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½È¡ï¿½ï¿½ï¿½İ£ï¿½ getIntï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¼ï¿½Öµï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½Öµï¿½ï¿½
+     * ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Öµï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê²Ã´ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½
      */
     public int getBestScore() {
 	return getPreferences(MODE_PRIVATE).getInt(SP_KEY_BEST_SCORE, 0);
     }
-    //ÏÔÊ¾×î¸ß·ÖÊı
+    //ï¿½ï¿½Ê¾ï¿½ï¿½ß·ï¿½ï¿½ï¿½
     public void showBestScore(int s) {
 	tvBestScore.setText(s + "");
     }
